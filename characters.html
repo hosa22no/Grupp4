@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Characters</title>
+  </head>
+  <body>
+    <div id="characters">
+      <h2>Characters</h2>
+      <ul id="character-list"></ul>
+      <div id="modalContainer"></div>
+      <button id="add-character-btn">Add Character</button>
+      <div id="errorMessages"></div>
+      <div id="loadingIndicator" style="display: none">Laddar...</div>
+
+      <h2>Add character</h2>
+      <form id="characterForm">
+       
+        <label for="name">Name</label>
+        <input type="text" id="characterName"/>
+        <label for="homePlanet">Home Planet:</label>
+        <input type="text" id="homePlanet"/>
+        
+        <button type="submit">Add new character</button>
+        
+        <button id="deleteButton">Delete character</button>
+
+      </form>
+    </div>
+
+    <script src="characters.js"></script>
+    <script src="crud.js"></script>
+  </body>
+</html>
