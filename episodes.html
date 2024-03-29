@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Futurama Characters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <h1><a href="index.html">Characters</a></h1>
+    </header>
+
+    <h1>\.....Episodes...../</h1>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newEpisodeModal">
+        Add
+    </button>
+    <div id="episodes">
+        <ul id="episodesList"></ul>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="newEpisodeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulär för att skapa ett nytt episode -->
+                    <form id="episodeForm">
+                        <!-- Namn på episode -->
+                        <div class="mb-3">
+                            <label for="episodeTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="episodeTitle" placeholder="Enter the title">
+                        </div>
+                        <!-- Säsong -->
+                        <div class="mb-3">
+                            <label for="season" class="form-label">Season</label>
+                            <input type="number" class="form-control" id="seasonNumber" placeholder="Enter the season">
+                        </div>
+                        <!-- Avsnitt -->
+                        <div class="mb-3">
+                            <label for="episode" class="form-label">Episode</label>
+                            <input type="number" class="form-control" id="episodeNumber" placeholder="Enter episode number">
+                        </div>
+                        <!-- Utgivningsdatum -->
+                        <div class="mb-3">
+                            <label for="releaseDate" class="form-label">Air date</label>
+                            <input type="date" class="form-control" id="releaseDate">
+                        </div>
+                        <!-- Lägg till fler formulärfält för ytterligare information om filmen -->
+                        <button type="submit" class="btn btn-primary">Create episode</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateEpisodeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulär för att uppdatera ett avsnitt -->
+                    <form id="updateEpisodeForm">
+                        <!-- Gamla värden för avsnittet (gömda fält) -->
+                        <input type="hidden" id="oldEpisodeTitle" name="oldEpisodeTitle" value="">
+                        <input type="hidden" id="oldSeasonNumber" name="oldSeasonNumber" value="">
+                        <input type="hidden" id="oldEpisodeNumber" name="oldEpisodeNumber" value="">
+
+                        <!-- Namn på episode -->
+                        <div class="mb-3">
+                            <label for="updateEpisodeTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="updateEpisodeTitle">
+                        </div>
+                        <!-- Säsong -->
+                        <div class="mb-3">
+                            <label for="updateSeasonNumber" class="form-label">Season</label>
+                            <input type="number" class="form-control" id="updateSeasonNumber">
+                        </div>
+                        <!-- Avsnitt -->
+                        <div class="mb-3">
+                            <label for="updateEpisodeNumber" class="form-label">Episode</label>
+                            <input type="number" class="form-control" id="updateEpisodeNumber">
+                        </div>
+
+                        <!-- Utgivningsdatum -->
+                        <div class="mb-3">
+                            <label for="updateReleaseDate" class="form-label">Air date</label>
+                            <input type="date" class="form-control" id="updateReleaseDate">
+                        </div>
+
+                        <!-- Lägg till fler formulärfält för ytterligare information om filmen -->
+                        <button type="submit" class="btn btn-primary">Update episode</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jscript.js"></script>
+    <script src="scripts/kscript.js"></script>
+    <script src="scripts/episode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

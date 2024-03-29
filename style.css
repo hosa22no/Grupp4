@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Baloo Chettan 2','Courier New', Courier, monospace;
+    color: white;
+}
+
+
+.charactersList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.character {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(50% - 20px); /* Adjust card width to occupy 50% of container width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+    .character h4 {
+        margin: 5px 0;
+    }
+
+    .character h5 {
+        margin: 3px 0;
+    }
+
+div#characters {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.open-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.update-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    /* Hover effect */
+    .open-button:hover, #addCharacterBtn:hover {
+        background-color: #45a049;
+    }
+
+header {
+    background-color: #24243e;
+    color: #fff;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+}
+
+    header h1 {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+        /* Hover effect for h1 and update button */
+        header h1:hover, #updateCharacterBtn:hover {
+            color: #ffcc00; /* Change color on hover */
+        }
+
+        /* Hyperlink styles */
+        header h1 a {
+            color: inherit; /* Inherit parent color */
+            text-decoration: none; /* Remove underline */
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+            /* Hover effect for hyperlink */
+            header h1 a:hover {
+                color: #ffcc00; /* Change color on hover */
+            }
+
+
+main {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    height: 100vh; /* Make the panel full height */
+    width: 200px; /* Set the width of the panel */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for visual effect */
+}
+
+    /* Header h1 styles */
+    main h1 {
+        margin: 0; /* Remove default margin */
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+    }
+
+#add-Btn, #delete-Btn, #update-Btn, #updateCharacterBtn {
+    background-color: goldenrod; /* Coral */
+    color: #ffffff; /* White */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* MOVIE BUTTONS */
+#add-character-Btn, #add-episode-Btn, #addCharacterBtn {
+    background-color: green; /* Coral */
+    color: #ffffff; /* White */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#delete-character-Btn, #delete-episode-Btn, #deleteBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+#update-character-Btn, #update-episode-Btn {
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+
+#name, #homeplanet, #age, #gender {
+    display: flex;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#addcharacter-form, #deletecharacter-form, #updatecharacter-form,
+#addepisode-form, #deleteepisode-form, #updateepisode-form {
+    text-align: center;
+}
+
+select {
+    font-size: 20px;
+}
+
+#single-episode {
+    position: fixed;
+    top: 30%;
+    right: 2%;
+    transform: translateY(-30%);
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+#single-character {
+    position: fixed;
+    top: 30%;
+    right: 2%;
+    transform: translateY(-30%);
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    width: 600px;
+    height: 800px;
+}
+
+    #single-character h4 {
+        margin: 5px;
+        margin-bottom: 10px;
+    }
+
+
+    #single-episode h4 {
+        margin: 5px;
+        margin-bottom: 10px;
+    }
+
+.close-button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .close-button:hover, #deleteBtn:hover {
+        background-color: #cc0000;
+    }
+
+    /* Responsive design */
+@media screen and (max-width: 768px) {
+    .character {
+        width: calc(100% - 20px); /* Adjust card width to occupy 100% of container width */
+    }
+}
+
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#homePlanet, #characterName{
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+}
+/*#label{
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+}*/
+
+/* Style for the label */
+label[for="homePlanet"], [for="characterName"]{
+    color: white; /* Set text color to white */
+    font-family: 'Baloo Chettan 2','Courier New', Courier, monospace;
+    text-align: center; /* Center the text */
+    display: block; /* Make the label a block element to center it */
+    margin: 0 auto; /* Center the label within its container */
+}
+
+/* Style for the input field */
+input[type="text"] {
+    color: #333; /* Set text color to white */
+    background-color: white; /* Set background color */
+    border: none; /* Remove border */
+    padding: 10px; /* Add padding */
+    width: 40%; /* Make the input field take full width of its container */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#buttons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+   justify-content: center;
+
+}
+#charactersContainer{
+    font-family: 'Arial','Courier New', Courier, monospace;
+}
+/*#character-list{
+    font-family: 'Arial','Courier New', Courier, monospace;
+    color:pink;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%
+}
+#character-list > li {
+    flex-basis: calc(33.33% - 10px);
+    box-sizing: border-box;
+    padding: 5px; 
+    margin: 5px; 
+}
+*/
